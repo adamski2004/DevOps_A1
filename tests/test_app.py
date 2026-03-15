@@ -6,6 +6,7 @@ from app import (
     pounds_to_kg,
     grams_to_pounds,
     pounds_to_grams,
+    main_conversion_function
 )
 
 # Example cases for conversion functions
@@ -33,8 +34,6 @@ def test_grams_to_pounds():
     # test that 1000 grams is equal to 2.20462 pounds
     # if this test fails, the function grams_to_pounds is incorrect
     assert pytest.approx(grams_to_pounds(1000), rel=1e-5) == 2.20462
-
-from app import main_conversion_function
 
 def test_pounds_to_kg_conversion_bug():
     result = main_conversion_function(10, "pounds", "kg")
